@@ -63,9 +63,9 @@ const Layout = ({code}) => {
         <Search/>
       </div>
       <Outlet/>
-      <button onClick={() => {
+      {/* <button onClick={() => {
         dispatch(refreshAccessToken(refreshToken))
-      }}>REFRESH</button>
+      }}>REFRESH</button> */}
       <div>
         <MiniPlayer/>
       </div>
