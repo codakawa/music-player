@@ -58,7 +58,7 @@ export const getAccessToken = createAsyncThunk(
         axios.post("https://accounts.spotify.com/api/token", {
             "grant_type": 'authorization_code',
             "code": code,
-            "redirect_uri": "https://codakawa.github.io./",
+            "redirect_uri": window.location.host,
             "client_id": "5e6ed4f2972940b597155ee74e2fff3b",
             "client_secret": "9b3af0a0cd474685a51faeb754353629"
         }, {
