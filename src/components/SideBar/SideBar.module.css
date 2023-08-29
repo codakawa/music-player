@@ -1,0 +1,91 @@
+* {
+    transition: 250ms;
+}
+
+.sideBarParent, .opened {
+    padding: 24px 16px;
+    width: 88px;
+    height: calc(100vh - 40px);
+    /* margin: 20px 0 20px 20px; */
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(50px);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.logo {
+    width: 218px;
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+}
+
+.logo a, .logoOpened a {
+    display: flex;
+    align-items: center;
+}
+
+.logo span, .logoOpened span {
+    color: rgba(255, 255, 255, 0.96);
+    font-family: Inter, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.sideBarParent .sideBarNavigate, .sideBarNavigateOpened {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 218px;
+}
+
+
+.sideBarParent .sideBarBtn, .sideBarBtnOpened {
+    display: inline-block;
+    width: 218px;
+    border-radius: 100px;
+    height: 56px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+.sideBarBtnOpened, .sideBarAccount {
+}
+
+
+.sideBarBtn a, .sideBarAccount a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+.sideBarLink {
+    color: rgba(255, 255, 255, 0.96);
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    line-height: 30px;
+    font-style: normal;
+}
+
+.sideBarBtn:hover, .sideBarBtnOpened:hover {
+    background: radial-gradient(101.08% 100.00% at 50.00% 100.00%, rgba(94, 94, 94, 0.14) 0%, rgba(94, 94, 94, 0.00) 73.85%), radial-gradient(100.02% 100.00% at 50.00% 100.00%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.00) 55.59%), rgba(255, 255, 255, 0.10);
+    background-blend-mode: color-dodge, normal, normal;
+}
+
+.opened {
+    width: 250px;
+}
+
+.d_none {
+    display: none;
+}

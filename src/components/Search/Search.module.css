@@ -1,0 +1,280 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/spinner-alt.css');
+i {
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin: 20px 0 0 20px;
+    /* background-color: #fff; */
+}
+
+i::before {
+    border-bottom-color: currentColor !important;
+    width: 60px !important;
+    height: 60px !important;
+}
+.searchBarParent {
+    width: 88px;
+    height: 88px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 24px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchBarParentOpened {
+    width: 500px;
+    
+}
+
+.searchBarParent label {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchBarParent input {
+    width: calc(100% - 94px);
+    height: 100%;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.96);
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 24px */
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+}
+
+.searchBarParent input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1; /* Firefox */
+  }
+  
+.searchBarParent input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.4);
+}
+  
+.searchBarParent input::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.eraseBtn {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
+
+.popUpSearch, .popUpLoad {
+    width: 500px;
+    height: calc(100vh - 138px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.10);
+    margin: 10px 0 0 10px;
+}
+
+.popUpSearchArtist {
+    width: 460px;
+    height: 182px;
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px 10px 10px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.10);
+    justify-content: space-around;
+}
+
+.artistImg img {
+    width: 162px;
+    height: 162px;
+    border-radius: 16px;
+}
+
+.artistImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff30;
+    border-radius: 16px;
+    width: 162px;
+    height: 162px;
+}
+
+.artistInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.artistInfo h4, .popUpLoad {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%; /* 20px */
+}
+
+.popUpLoad {
+    font-size: 30px;
+}
+.artistInfo > div {
+    display: flex;
+    gap: 10px;
+}
+
+.artistInfo a {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.10);
+}
+.artistInfo a:hover {
+    background: radial-gradient(101.08% 100.00% at 50.00% 100.00%, rgba(94, 94, 94, 0.14) 0%, rgba(94, 94, 94, 0.00) 73.85%), radial-gradient(100.02% 100.00% at 50.00% 100.00%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.00) 55.59%), rgba(255, 255, 255, 0.10);
+    background-blend-mode: color-dodge, normal, normal;
+}
+
+.artistInfo a span {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+}
+
+.popUpSearchResults {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    border-radius: 26px;
+}
+
+.popUpSearchResults::-webkit-scrollbar {
+    display: none;
+}
+
+.popUpSearchResults img {
+    width: 60px;
+    height: 60px;
+    border-radius: 9px;
+    
+}
+
+.popUpSearchResults > div {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+    position: relative;
+}
+.popUpSearchResults > div:hover, .currentPlaying {
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 16px;
+    
+}
+.popUpSearchResults > div:hover > div:nth-child(1) img, .currentPlaying > div:nth-child(1) img{
+    filter: brightness(0.5);
+}
+.popUpSearchResults > div > div {
+    position: relative;
+}
+.popUpSearchResults > div > div svg {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    filter: opacity(0);
+    z-index: 1;
+}
+.popUpSearchResults > div:hover > div svg {
+    filter: opacity(1);
+}
+.currentPlaying svg {
+    filter: opacity(1) !important;
+}
+
+.popUpSearchResults > div > div:nth-last-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.popUpSearchResults > div > div:nth-last-child(1) div svg {
+    width: 36px;
+    height: 36px;
+    position: static;
+    border-radius: 50%;
+    transition: 0;
+}
+.popUpSearchResults > div > div:nth-last-child(1) div svg:hover {
+    background: radial-gradient(101.08% 100.00% at 50.00% 100.00%, rgba(94, 94, 94, 0.14) 0%, rgba(94, 94, 94, 0.00) 73.85%), radial-gradient(100.02% 100.00% at 50.00% 100.00%, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.00) 55.59%), rgba(255, 255, 255, 0.10);
+    background-blend-mode: color-dodge, normal, normal;
+}
+.popUpSearchResults > div > div:nth-last-child(1) div svg:active {
+    background-color: #ffffff30;
+}
+
+
+
+.popUpSearchResults > div > div:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 268px;
+} 
+
+.popUpSearchResults h4 {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+}
+
+.popUpSearchResults h5 {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+}
+
+.loadImage {
+    visibility: hidden;
+}
+
+.d_none {
+    display: none;
+}
+
+.h0 {
+    height: 0;
+}
+
+.h0  * {
+    display: none;
+}
