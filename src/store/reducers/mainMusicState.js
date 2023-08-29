@@ -54,11 +54,12 @@ export const refreshAccessToken = createAsyncThunk(
 export const getAccessToken = createAsyncThunk(
     "getAccessToken",
     async(code, {dispatch}) => {
+        console.log(window.location.protocol + "//" + window.location.host + "/");
         console.log("start");
         axios.post("https://accounts.spotify.com/api/token", {
             "grant_type": 'authorization_code',
             "code": code,
-            "redirect_uri": window.location.host,
+            "redirect_uri": window.location.protocol + "//" + window.location.host + "/",
             "client_id": "5e6ed4f2972940b597155ee74e2fff3b",
             "client_secret": "9b3af0a0cd474685a51faeb754353629"
         }, {

@@ -13,8 +13,8 @@ const Login = () => {
     // const AUTH_URI = "https://accounts.spotify.com/api/token"
     const CLIENT_SECRET = "9b3af0a0cd474685a51faeb754353629"
     const CLIENT_ID = "5e6ed4f2972940b597155ee74e2fff3b"
-    const AUTH_URI = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${window.location.host}&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`
-    
+    const AUTH_URI = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${window.location.protocol + "//" + window.location.host + "/"}&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`
+    console.log(window.location.href);
     
     
     // const updTokens = () => {
